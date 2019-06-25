@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Witaj ziomeczku</h1>
+<div mat-dialog-content>
+  <p>Wpisz nową nazwę tego terapeuty</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.element.Name">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Jednak nie</button>
+  <button mat-button [mat-dialog-close]="data.therapist" cdkFocusInitial>Zapisz</button>
+</div>

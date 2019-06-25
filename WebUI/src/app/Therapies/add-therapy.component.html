@@ -1,0 +1,50 @@
+<form>
+
+    <h2>Dodaj terapię</h2><br>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="time">Godzina</label>
+            <br>
+            <ngb-timepicker [(ngModel)]="time" name="time"></ngb-timepicker>
+        </div>
+
+    </div>
+
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="data"></label>
+            <mat-form-field>
+                <input matInput [matDatepicker]="picker" placeholder="Wybierz datę" [(ngModel)]="therapy.Date" name="date">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+    </div>
+
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputKlient">Klient</label>
+            <select id="inputKlient" class="form-control" [(ngModel)]="therapy.ClientId" name="client">
+                <option *ngFor="let client of clients" [value]="client.Id">
+                    {{client.Name}}
+                </option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputTerapeuta">Terapeuta</label>
+            <select id="inputTerapeuta" class="form-control" [(ngModel)]="therapy.TherapistId" name="therapist">
+                <option *ngFor="let therapist of therapists" [value]="therapist.Id">
+                    {{therapist.Name}}
+                </option>
+            </select>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="save()">Zapisz</button>
+
+</form>

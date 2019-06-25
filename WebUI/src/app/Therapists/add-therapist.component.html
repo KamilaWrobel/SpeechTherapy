@@ -1,0 +1,15 @@
+<form>
+
+        <h2>Dodaj terapeutę</h2><br>
+
+        <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control" id="inputAge" placeholder="Imię" [(ngModel)]="therapist.Name" name="name" >
+                </div>
+        </div>
+
+        <br>
+
+        <button type="submit" class="btn btn-primary" (click)="save()">Zapisz</button>
+    
+</form>

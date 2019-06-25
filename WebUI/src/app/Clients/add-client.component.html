@@ -1,0 +1,37 @@
+<form>
+
+    <h2>Dodaj klienta</h2><br>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputName">Imię</label>
+            <input type="text" class="form-control" id="inputName" placeholder="Imię" [(ngModel)]="client.Name" name="name">
+        </div>
+
+        <div class="form-group col-md-6">
+            <label for="inputWiek">Wiek</label>
+            <input type="text" class="form-control" id="inputAge" placeholder="Wiek" [(ngModel)]="client.Age" name="age" >
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+                <label for="inputTerapeuta">Terapeuta</label>
+                <select id="inputTerapeuta" class="form-control" [(ngModel)]="client.TherapistId" name="therapist">
+                    <option *ngFor="let therapist of therapists" [value]="therapist.Id">
+                        {{therapist.Name}}
+                    </option>
+                </select>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label for="inputStatus">Status terapii</label>
+            <select id="inputStatus" class="form-control" [(ngModel)]="client.StatusName" name="statusName">
+                <option *ngFor="let enum of statusEnum" [value]="enum.Key">
+                    {{enum.Value}}
+                </option>
+            </select>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="save()">Zapisz</button>
+
+</form>

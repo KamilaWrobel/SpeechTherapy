@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>Witaj ziomeczku</h1>
+<div mat-dialog-content>
+  <p>Wpisz opis terapii</p>
+  <!-- <mat-form-field>
+    <input matInput [(ngModel)]="data.element.Description">
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </mat-form-field> -->
+
+  <form class="example-form">
+  <mat-form-field class="example-full-width">
+      <textarea class="form-control"  matInput [(ngModel)]="data.element.Description" name="description"></textarea>
+    </mat-form-field>
+  </form>
+
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Jednak nie</button>
+  <button mat-button [mat-dialog-close]="data.therapy" cdkFocusInitial>Zapisz</button>
+</div>

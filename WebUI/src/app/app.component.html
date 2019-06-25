@@ -1,0 +1,61 @@
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-sm-3 col-md-2 mr-0" style="font-family: Segoe Script; color:white; font-size:20px !important;">
+    <span style= "margin-left: 50px">Speech Therapy</span>
+  </a>
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+      <a class="nav-link" href="https://getbootstrap.com/docs/4.3/examples/dashboard/#">Sign out</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column" style="font-size:20px; font-family: Courier !important; margin-left: 20px; margin-top: 10px">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/clients" >
+              <i class="fas fa-user-graduate" style="color:#575353"></i>
+              Klienci
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/addClient">
+              <i class="fas fa-plus" style="color:#575353"></i>
+              Dodaj klienta
+            </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" routerLink="/therapists">
+                <i class="fas fa-glasses" style="color:#575353"></i>
+                Terapeuci
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" routerLink="/addTherapist">
+                <i class="fas fa-plus" style="color:#575353"></i>
+                Dodaj terapeutę
+              </a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/schedule">
+              <i class="far fa-calendar-alt" style="color:#575353"></i>
+              Grafik
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/addTherapy">
+              <i class="fas fa-plus" style="color:#575353"></i>
+              Dodaj terapię
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+    <div class="container" style="margin-top: 3%;">
+		  <router-outlet></router-outlet>
+    </div>
